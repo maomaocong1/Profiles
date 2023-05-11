@@ -1,0 +1,46 @@
+/* app/utils.module.css */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border: 2px solid white ;
+    
+}
+
+@keyframes example {
+    from {border: 2px solid white}
+    to {border: 4px solid white}
+  }
+
+.sidebar a {
+    margin-top: 10px;
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    color: aliceblue;
+    border: 2px solid white ;
+    border-radius: 1pc;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+    animation-duration: 4s;
+
+}
+
+.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+    color: white;
+    background-color: black;
+    border: 2px solid white ;
+
+
+}

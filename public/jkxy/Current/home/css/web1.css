@@ -1,0 +1,419 @@
+body{
+    min-width: 1200px;
+    background-color: #f8f8f8;
+}
+.shouping_box{
+    height: 765px;
+}
+.shouping{
+    width: 100%;
+    height:565px;
+    background: url("../images/shouping_bg.png") no-repeat center;
+    -webkit-background-size: 1920px 565px;
+    background-size: 1920px 565px;
+    color: #ffffff;
+}
+
+.magin_bottom35{
+    margin-bottom: 35px;
+}
+.magin_bottom20{
+    margin-bottom: 20px;
+}
+.title{
+    padding-top: 120px;
+    font-size: 65px;
+    color: #24adee;
+}
+.fw_500{
+    font-weight: normal!important;
+}
+.fz_65{
+    font-size: 28px;
+}
+.fz_28{
+    font-size: 28px;
+}
+.fz_18{
+    font-size: 18px;
+    font-weight: normal!important;
+}
+.fz_25{
+    font-size: 25px;
+}
+.conbox{
+    width: 260px;
+    height: 260px;
+    position: relative;
+    float: left;
+    padding-top: 30px;
+}
+.classinfo{
+    top: 30px;
+    position: relative;
+    width: 1040px;
+    height: 260px;
+    margin: 0 auto;
+}
+.qgh{
+    background: url("../images/bg1.png?__sprite")  no-repeat  scroll center;
+    -webkit-background-size: 260px 260px;
+    background-size: 260px 260px;
+}
+.zxx{
+    background: url("../images/bg2.png?__sprite")  no-repeat  scroll center;
+    -webkit-background-size: 260px 260px;
+    background-size: 260px 260px;
+}
+.mission{
+    background: url("../images/bg3.png?__sprite")  no-repeat  scroll  center;
+    -webkit-background-size: 260px 260px;
+    background-size: 260px 260px;
+}
+.baojiuye{
+    background: url("../images/bg4.png?__sprite")  no-repeat  center;
+    -webkit-background-size: 260px 260px;
+    background-size: 260px 260px;
+}
+.conbox img{
+    width: 80px;
+    height: 76px;
+}
+.fc_black{
+    color: #000;
+}
+.fc_white{
+    color:#fff;
+}
+.a_noline:hover{
+    text-decoration: none;
+}
+.zhixun{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width:278px ;
+    height: 53px;
+    color:white;
+    font-size: 28px;
+    background-color: #eb6100;
+    border: none;
+  }
+.zhixun:hover{
+    background-color: #f39800;
+}
+.selectclass_box{
+    width: 1200px;
+}
+.selectclass{
+    position: relative;
+    padding-top: 100px;
+    width: 100%;
+    height: 1370px;
+}
+.selectclass_box{
+    width:100%;
+}
+.selectclass_title{
+font-size: 38px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.class_box{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+.c1{
+    margin: 0 10px 10px 10px;
+    height: 225px;
+    overflow: hidden;
+
+}
+.c1 img{
+    width: 1200px;
+    height: 225px;
+}
+.trasition{
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    -ms-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    transition: margin-top 1s;
+}
+
+.btnbm{
+    display: block;
+    width: 250px;
+    height: 45px;
+    font-size: 21px;
+    position: relative;
+    margin: -65px auto 0 auto;
+    line-height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+#class1 .btnbm:hover{
+    color: #26a9e1;
+    text-decoration: none;
+    background-color: white;
+}
+#class2 .btnbm:hover{
+    color: #8cc63e;
+    text-decoration: none;
+    background-color: white;
+}
+#class3 .btnbm:hover{
+    color: #df5844;
+    text-decoration: none;
+    background-color: white;
+}
+#class4 .btnbm:hover{
+    color: #745a95;
+    text-decoration: none;
+    background-color: white;
+}
+#class5 .btnbm:hover{
+    color: #e5b700;
+    text-decoration: none;
+    background-color: white;
+}
+
+.teacherlubo_bg{
+    margin-top: 72px;
+    width: 100%;
+    height: 675px;
+    background: url("../images/lunbo_bg.jpg?__sprite") no-repeat center;
+    -webkit-background-size: 1920px 675px;
+    background-size: 1920px 675px;
+}
+.teacherlubo_box{
+    margin-left: auto;
+    margin-right: auto;
+    top: 236px;
+    position: relative;
+    width:1200px;
+    height: 300px;
+  overflow: hidden;;
+}
+.techerlubo_view{
+    width: 3600px;
+    height: 300px;
+
+}
+.teacherlubo_bg img{
+    width:1200px;
+    height: 300px;
+    position: relative;
+    float: left;
+}
+.xueyuan{
+    width: 100%;
+    height: 607px;
+}
+.studentesay{
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    float: left;
+    width:920px;
+    height: 108px;
+    background: url("../images/student_say.png?__sprite") no-repeat center;
+    -webkit-background-size: 917px 107px;
+    background-size: 917px 107px;
+    margin-bottom: 15px;
+}
+.student p{
+    margin-left: 30px;
+    color: #0f6a99;
+    font-size: 18px;
+}
+.student{
+    margin: 0 auto;
+    width: 1052px;
+}
+.studentesay:hover{
+    background: url("../images/student_say2.png?__sprite") no-repeat center;
+    -webkit-background-size: 917px 107px;;
+    background-size: 917px 107px;
+}
+.studentphoto{
+    position: relative;
+    float: left;
+    width: 132px;
+    height: 107px;
+}
+.xwt{
+    background: url("../images/stu_1.png?__sprite") no-repeat center;
+    -webkit-background-size: 132px 107px;
+    background-size: 132px 107px;
+}
+.drc{
+    background: url("../images/stu_3.png?__sprite") no-repeat center;
+    -webkit-background-size: 132px 107px;
+    background-size:132px 107px;
+}
+.gwh{
+    background: url("../images/stu_2.png?__sprite") no-repeat center;
+    -webkit-background-size:132px 107px;
+    background-size:132px 107px;
+}
+.student_title h3{
+    font-size: 38px;
+}
+.student_title{
+    margin-top:50px;
+    margin-bottom: 42px;
+
+}
+
+.vedio{
+    width: 100%;
+    height: 554px;
+    background: url("../images/vedio_bg.png") no-repeat center;
+    -webkit-background-size:1920px 554px;
+    background-size:1920px 554px;
+}
+.vedio_box{
+    width: 1450px;
+    height:408px ;
+  -webkit-transition: margin-left 1s;
+  -moz-transition: margin-left 1s;
+  -ms-transition: margin-left 1s;
+  -o-transition: margin-left 1s;
+  transition: margin-left 1s;
+}
+.vedio_veiw{
+    margin: 0 auto;
+    width: 725px;
+    overflow: hidden;
+}
+.androidvedio{
+    position: relative;
+    float: left;
+    margin-top: 110px;
+    width: 725px;
+    height: 408px;
+}
+.faq{
+   padding-top: 78px;
+    width: 100%;
+background-color: #eaebea;
+}
+.faq_title{
+    width: 971px;
+    height: 67px;
+    background: url("../images/faq.png?__sprite") no-repeat center;
+    -webkit-background-size:971px 67px;
+    background-size:971px 67px;
+    margin: 0 auto;
+}
+.faqcontent_item{
+    width: 971px;
+    height: 92px;
+    border:1px solid #eaebea;
+    padding-left: 98px;
+    padding-top: 20px;
+}
+.faqcontent_item1{
+    width: 971px;
+    height: 115px;
+    border:1px solid #eaebea;
+    padding-left: 98px;
+    padding-top: 20px;
+}
+.faqcontent{
+    background-color: #fff;
+    width: 971px;
+    height: 414px;
+    margin: 0 auto;
+}
+.faqcontent_item_question{
+    color:#3177a1;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.faqcontent_item_answer{
+    color:#787878;
+    font-size: 15px;
+}
+.footer{
+    width: 100%;
+    height: 105px;
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    text-align: center;
+    padding: 46px;
+}
+.footer a{
+    color: #999;
+}
+.yuyue{
+  width: 153px;
+  height: 33px;
+  position: relative;
+  float: left;
+  background: url("../images/qipao.png") no-repeat center;
+  -webkit-background-size:153px 33px;
+  background-size:153px 33px;
+  margin-left: 50%;
+  left: 160px;
+  top: -38px;
+  line-height: 34px;
+  font-size: 15px;
+}
+.noteme{
+  width: 100%;
+
+}
+.jiantou{
+  position: absolute;
+  width: 57px;
+  height: 70px;
+}
+.jiantou:hover{
+  cursor: pointer;
+}
+.left{
+  margin-top: 260px;
+  margin-left: 80px;
+  background: url("../images/jiantou_1.png?_sprite");
+  -webkit-background-size:57px 70px;
+  background-size:57px 70px;
+  z-index: 2;
+
+}
+
+.right{
+  margin-top: -260px;
+  right: 0;
+  margin-right: 80px;
+  background: url("../images/jiantou_2.png?_sprite");
+  -webkit-background-size:57px 70px;
+  background-size:57px 70px;
+  z-index: 2;
+}
+
+.dots{
+  position: relative;
+  width: 1200px;
+  height: 10px;
+  margin-left: 50%;
+}
+.dots .dot{
+ background-color: transparent;
+  position: relative;
+  margin-top: 300px;
+  float: left;
+  left: -111px;
+  margin-left: 50px;
+  border: 2px solid #2990bf;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}
+.dots .active{
+  background-color: #2990bf;
+}
+

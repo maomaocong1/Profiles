@@ -1,0 +1,33 @@
+div {
+    margin: auto;
+    margin-top: 10px;
+    border:2px;
+  }
+  
+  input{
+    color: #000000;
+  }
+  
+  li{
+    width: 20%;
+  }
+  #btn-black{
+    width: 15%;
+    height: 40px;
+    border:2px;
+    border-radius: 1cap;
+    border-style: solid;
+    border-color: #FFFFFF;
+    margin-top: 10px;
+  }
+  
+  #barcode{
+    width:auto;
+    height: auto;
+    padding: 10px;
+  }
+
+  #name{
+    height: 35px;
+  }
+  

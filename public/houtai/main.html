@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/mycss2.css" type="text/css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>后台管理系统</title>
+</head>
+<body>
+<nav class="navbar navbar-default" id="header">
+    <div class="container-fluid" id="header_box">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="logoimg"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="logo_main" href="#"><img src="img/logo.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left" id="navbar-left">
+                <li class=" text-center qcpad">
+                    <a>
+                        <div class="item">
+                            <img src="img/icon01.png">
+                            <h6>工作台</h6>
+                        </div>
+                    </a>
+                </li>
+                <li class="text-center qcpad">
+                    <a>
+                        <div class="item text-center">
+                            <img src="img/icon02.png">
+                            <h6>模型管理</h6>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="item text-center qcpad">
+                            <img src="img/icon03.png">
+                            <h6>模块设计</h6>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="item text-center qcpad">
+                            <img src="img/icon04.png">
+                            <h6>常用工具</h6>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <div class="item text-center qcpad">
+                            <img src="img/icon05.png">
+                            <h6>文件管理</h6>
+                        </div>
+                    </a></li>
+                <li><a>
+                    <div class="item text-center qcpad">
+                        <img src="img/icon06.png">
+                        <h6>系统设置</h6>
+                    </div>
+                </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" id="header_right">
+                <li><a href="#">帮助&nbsp;&nbsp;|</a></li>
+                <li><a href="#">关于&nbsp;&nbsp;|</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+            <div class="message_box"></div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<article class="content">
+    <div class="container-fluid" id="conten_box">
+        <div class="list_box">
+            <ul class="list-group" id="list-group">
+                <li class="list-group-item " id="listtitle"><span class="icon"></span>通讯录</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;<img src="img/leftico01.png">&nbsp;&nbsp;管理信息</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;<img src="img/leftico02.png">&nbsp;&nbsp;其他设置</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;<img src="img/leftico03.png">&nbsp;&nbsp;编辑器</li>
+                <li class="list-group-item">&nbsp;&nbsp;&nbsp;<img src="img/leftico04.png">&nbsp;&nbsp;日期管理</li>
+            </ul>
+        </div>
+        <div class="main_box">
+            <ol class="breadcrumb" id="bread">
+                <li><a href="#">位置:</a></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">数据表</a></li>
+                <li class="active">基本内容</li>
+            </ol>
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+
+                <button type="button" class="btn btn-default marginritgh"><span><img src="img/t01.png"></span>增加
+                </button>
+                <button type="button" class="btn btn-default marginritgh"><span><img src="img/t02.png"></span>修改
+                </button>
+                <button type="button" class="btn btn-default marginritgh"><span><img src="img/t03.png"></span>删除
+                </button>
+                <button type="button" class="btn btn-default marginritgh"><span><img src="img/t04.png"></span>统计
+                </button>
+                <button type="button" class="btn btn-default marginritgh" id="config_btn"><span><img src="img/t05.png"></span>设置
+                </button>
+
+            </div>
+            <table class="table table-bordered table-striped table-hover" id="datatab">
+                <thead>
+                <tr class="active">
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>编号</td>
+                    <td>标题</td>
+                    <td>用户</td>
+                    <td>籍贯</td>
+                    <td>发布时间</td>
+                    <td>是否审核</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130908</td>
+                    <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
+                    <td>admin</td>
+                    <td>江苏南京</td>
+                    <td>2013-09-09 15:05</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink"> 删除</a></td>
+                </tr>
+
+                <tr class="odd">
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130907</td>
+                    <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
+                    <td>uimaker</td>
+                    <td>山东济南</td>
+                    <td>2013-09-08 14:02</td>
+                    <td>未审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130906</td>
+                    <td>社科院:电子商务促进了农村经济结构和社会转型</td>
+                    <td>user</td>
+                    <td>江苏无锡</td>
+                    <td>2013-09-07 13:16</td>
+                    <td>未审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr class="odd">
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130905</td>
+                    <td>江西"局长违规建豪宅"：局长检讨</td>
+                    <td>admin</td>
+                    <td>北京市</td>
+                    <td>2013-09-06 10:36</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130904</td>
+                    <td>中国2020年或迈入高收入国家行列</td>
+                    <td>uimaker</td>
+                    <td>江苏南京</td>
+                    <td>2013-09-05 13:25</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr class="odd">
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130903</td>
+                    <td>深圳地铁车门因乘客拉闸打开 3人被挤入隧道</td>
+                    <td>user</td>
+                    <td>广东深圳</td>
+                    <td>2013-09-04 12:00</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130902</td>
+                    <td>33次地表塌陷 村民不敢下地劳作(图)</td>
+                    <td>admin</td>
+                    <td>湖南长沙</td>
+                    <td>2013-09-03 00:05</td>
+                    <td>未审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr class="odd">
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130901</td>
+                    <td>医患关系：医生在替改革不彻底背黑锅</td>
+                    <td>admin</td>
+                    <td>江苏南京</td>
+                    <td>2013-09-02 15:05</td>
+                    <td>未审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td><input name="" value="" type="checkbox"></td>
+                    <td>20130900</td>
+                    <td>山东章丘公车进饭店景点将自动向监控系统报警</td>
+                    <td>uimaker</td>
+                    <td>山东滨州</td>
+                    <td>2013-09-01 10:26</td>
+                    <td>已审核</td>
+                    <td><a href="#" class="tablelink">查看</a> <a href="#" class="tablelink">删除</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="pagin">
+                <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页
+                    <nav>
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">10</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom text-center" id="copyright">
+        <div class="container">
+            <div class="panel-body">版权所有 2014
+                仅供学习交流，勿用于任何商业用途
+            </div>
+        </div>
+    </nav>
+</article>
+</body>
+</html>

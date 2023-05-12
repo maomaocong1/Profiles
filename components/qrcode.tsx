@@ -2,7 +2,6 @@
 import Script from 'next/script';
 import "./qrcode.css";
 import qrcode from 'qrcode-generator';
-import { Types } from 'aws-sdk/clients/simpledb';
 
 export default function Home() {
   return (

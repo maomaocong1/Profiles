@@ -1,12 +1,15 @@
 'use client'
 import Script from 'next/script';
 import "./qrcode.css";
+import qrcode from 'qrcode-generator';
+import { Types } from 'aws-sdk/clients/simpledb';
 
-const qrcode = require("qrcode");
 export default function Home() {
   return (
     <>
     
+    <Script id= "qrcode1" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" />
+
       <div className='h-fit w-screen border-solid border-white border-2 h-30 w-300'>
         <div className='h-fit w-screen'>
         
@@ -21,12 +24,12 @@ export default function Home() {
         <button onClick={(err) => {
           try {
             let va = (document.getElementById("name") as HTMLInputElement).value;
-            var typeNumber = 4;
-            var errorCorrectionLevel = 'L';
+            var typeNumber:TypeNumber = 4;
+            var errorCorrectionLevel:ErrorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);
             qr.addData(va);
             qr.make();
-            document.getElementById('placeHolder').innerHTML = qr.createImgTag(6,15,15);
+            document.getElementById('placeHolder').innerHTML = qr.createImgTag(6,15);
           }
           catch (err) {
             if (err) {
@@ -42,7 +45,7 @@ export default function Home() {
 
             
             let va = (document.getElementById("name") as HTMLInputElement).value;
-            let img = (document.getElementById("placeHolder")?.children[0] as HTMLImageElement).currentSrc;
+            let img = (document.getElementById("placeHolder").children[0] as HTMLImageElement).currentSrc;
 
             
             let download = document.createElement('a');
@@ -96,18 +99,17 @@ export default function Home() {
         <Script id= "qrcode" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
           onLoad={() => {
             let va = (document.getElementById("name") as HTMLInputElement).value;
-            var typeNumber = 4;
-            var errorCorrectionLevel = 'L';
+            var typeNumber:TypeNumber = 4;
+            var errorCorrectionLevel:ErrorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);
             qr.addData(va);
             qr.make();
-            document.getElementById('placeHolder').innerHTML = qr.createImgTag(8,5,5);
+            document.getElementById('placeHolder').innerHTML = qr.createImgTag(6,15);
           }}
         >
 
         </Script>
 
-        
     </>
   )
 }

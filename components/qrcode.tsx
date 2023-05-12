@@ -1,9 +1,8 @@
 'use client'
 import Script from 'next/script';
-import "./qrcode.css"
-//import JsBarcode from 'jsbarcode';
+import "./qrcode.css";
 
-
+const qrcode = require("qrcode");
 export default function Home() {
   return (
     <>
@@ -21,7 +20,7 @@ export default function Home() {
 
         <button onClick={(err) => {
           try {
-            let va = document.getElementById("name").value;
+            let va = (document.getElementById("name") as HTMLInputElement).value;
             var typeNumber = 4;
             var errorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);
@@ -40,8 +39,10 @@ export default function Home() {
 
         <button onClick={(err) => {
           try {
-            let va = document.getElementById("name").value;
-            let img = document.getElementById("placeHolder")?.children[0].currentSrc;
+
+            
+            let va = (document.getElementById("name") as HTMLInputElement).value;
+            let img = (document.getElementById("placeHolder")?.children[0] as HTMLImageElement).currentSrc;
 
             
             let download = document.createElement('a');
@@ -64,8 +65,8 @@ export default function Home() {
 
       <button onClick={(err) => {
           try {
-            let url = document.getElementById("placeHolder")?.children[0].currentSrc;
-            let data = document.getElementById("name").value;
+            let url = (document.getElementById("placeHolder")?.children[0] as HTMLImageElement).currentSrc;
+            let data = (document.getElementById("name") as HTMLInputElement).value;
             var imageWindow = window.open('', '_blank');
                 imageWindow.document.write('<html><head><title>Print Image</title></head><body>');
 
@@ -92,9 +93,9 @@ export default function Home() {
         <div>
         <div id="placeHolder"></div>
         </div>
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
+        <Script id= "qrcode" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
           onLoad={() => {
-            let va = document.getElementById("name").value;
+            let va = (document.getElementById("name") as HTMLInputElement).value;
             var typeNumber = 4;
             var errorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);

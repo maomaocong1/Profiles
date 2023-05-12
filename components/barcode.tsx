@@ -1,8 +1,7 @@
 'use client'
 import Script from 'next/script';
 import "./barcode.css"
-//import JsBarcode from 'jsbarcode';
-
+import JsBarcode from 'jsbarcode';
 
 export default function Home() {
   return (
@@ -38,11 +37,14 @@ export default function Home() {
 
         <button onClick={(err) => {
           try {
-            var va = document.getElementById("name").value;
-            let codetype = document.getElementsByName("codetype")
+
+            let va = (document.getElementById("name") as HTMLInputElement).value;
+            console.log(va);
+            
+            let codetype = document.getElementsByName("codetype");
             for (let i = 0; i < codetype.length; i++) {
-              if (codetype[i].checked)
-                  var codeselected = codetype[i].value;
+              if ((codetype[i] as HTMLInputElement).checked)
+                  var codeselected = (codetype[i] as HTMLInputElement).value;
                     
           }
             JsBarcode("#barcode", va,{"format":codeselected});
@@ -58,7 +60,7 @@ export default function Home() {
 
         <button onClick={(err) => {
           try {
-            let va = document.getElementById("name").value;
+            let va = (document.getElementById("name") as HTMLInputElement).value;
             const svgElement = document.getElementById("barcode");
             const canvas = document.createElement("canvas");
             canvas.width = svgElement.clientWidth;
@@ -106,10 +108,10 @@ export default function Home() {
         <div>
           <svg id="barcode"></svg>
         </div>
-        <Script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"
+        <Script id = "barcode1" src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"
           onLoad={() => {
-            let codetype = document.getElementsByName("codetype")
-            codetype[0].checked = true;
+            let codetype = document.getElementsByName("codetype");
+            (codetype[0] as HTMLInputElement).checked = true;
             JsBarcode("#barcode", "TBA123156789456");
           }}
         >

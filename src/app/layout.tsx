@@ -30,7 +30,7 @@ export default function RootLayout({
       <body>
       <div className={`${styles.sidebar}`}>
         {menu.records.map(({link,name}) =>(
-          <Link id={`${name}`} href={`${link}`}>{`${name}`}</Link>
+          <Link key={`${name}`} id={`${name}`} href={`${link}`}>{`${name}`}</Link>
         ))}
         
       

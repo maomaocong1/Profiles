@@ -39,7 +39,7 @@ export default function Home() {
           try {
 
             let va = (document.getElementById("name") as HTMLInputElement).value;
-            console.log(va);
+            sessionStorage.setItem("barcode_data",va);
             
             let codetype = document.getElementsByName("codetype");
             for (let i = 0; i < codetype.length; i++) {
@@ -110,9 +110,26 @@ export default function Home() {
         </div>
         <Script id = "barcode1" src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"
           onLoad={() => {
+            let va = (document.getElementById("name") as HTMLInputElement).value;
+            let vb = sessionStorage.getItem("barcode_data");
+            if (va !== vb && vb !==null) {
+                va = vb;
+            }
             let codetype = document.getElementsByName("codetype");
             (codetype[0] as HTMLInputElement).checked = true;
-            JsBarcode("#barcode", "TBA123156789456");
+            JsBarcode("#barcode", va);
+          }}
+
+          onReady={() => {
+            let va = (document.getElementById("name") as HTMLInputElement).value;
+            let vb = sessionStorage.getItem("barcode_data");
+            if (va !== vb && vb !==null) {
+                va = vb;
+            }
+            (document.getElementById("name") as HTMLInputElement).value = vb;
+            let codetype = document.getElementsByName("codetype");
+            (codetype[0] as HTMLInputElement).checked = true;
+            JsBarcode("#barcode", va);
           }}
         >
 

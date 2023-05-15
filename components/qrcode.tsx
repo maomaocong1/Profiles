@@ -116,6 +116,8 @@ export default function Home() {
           let va = sessionStorage.getItem("qrcode_data");
           if(va == null){
             va = (document.getElementById("name") as HTMLInputElement).value;
+          }else{
+            (document.getElementById("name") as HTMLInputElement).value = va;
           }
           
           var typeNumber:TypeNumber = 4;

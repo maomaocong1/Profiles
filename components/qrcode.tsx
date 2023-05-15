@@ -99,31 +99,29 @@ export default function Home() {
         </div>
         <Script id= "qrcode" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"
           onLoad={() => {
-            let va = (document.getElementById("name") as HTMLInputElement).value;
-            let vb = sessionStorage.getItem("qrcode_data");
-            if (vb) {
-              (document.getElementById("name") as HTMLInputElement).value = vb;
-            }else{
-              vb = va;
-            }
+            let va = sessionStorage.getItem("qrcode_data");
+          if(va == null){
+            va = (document.getElementById("name") as HTMLInputElement).value;
+          }
             var typeNumber:TypeNumber = 4;
             var errorCorrectionLevel:ErrorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);
-            qr.addData(vb);
+            qr.addData(va);
             qr.make();
             document.getElementById('placeHolder').innerHTML = qr.createImgTag(6,15);
           }}
 
           
-          onReady={()=>{let va = (document.getElementById("name") as HTMLInputElement).value;
-          let vb = sessionStorage.getItem("qrcode_data");
-          if (vb) {
-            (document.getElementById("name") as HTMLInputElement).value = vb;
+          onReady={()=>{
+          let va = sessionStorage.getItem("qrcode_data");
+          if(va == null){
+            va = (document.getElementById("name") as HTMLInputElement).value;
           }
+          
           var typeNumber:TypeNumber = 4;
           var errorCorrectionLevel:ErrorCorrectionLevel = 'L';
           var qr = qrcode(typeNumber, errorCorrectionLevel);
-          qr.addData(vb);
+          qr.addData(va);
           qr.make();
           document.getElementById('placeHolder').innerHTML = qr.createImgTag(6,15);}}
         >

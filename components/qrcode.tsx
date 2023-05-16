@@ -24,7 +24,10 @@ export default function Home() {
           try {
             let va = (document.getElementById("name") as HTMLInputElement).value;
             sessionStorage.setItem("qrcode_data",va);
-            
+            console.log("111");
+
+            document.getElementById("dataHolder").innerHTML ='<p>'+va+'</p>';
+            console.log("222");
             var typeNumber:TypeNumber = 4;
             var errorCorrectionLevel:ErrorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);
@@ -70,7 +73,7 @@ export default function Home() {
       <button onClick={(err) => {
           try {
             let url = (document.getElementById("placeHolder")?.children[0] as HTMLImageElement).currentSrc;
-            let data = (document.getElementById("name") as HTMLInputElement).value;
+            let data = document.getElementById("dataHolder").innerHTML;
             var imageWindow = window.open('', '_blank');
                 imageWindow.document.write('<html><head><title>Print Image</title></head><body>');
 
@@ -95,6 +98,7 @@ export default function Home() {
         }} id="btn-black" className="stopwatchButton btn-black">Print</button>
       </div>
         <div>
+        <div id="dataHolder"></div>
         <div id="placeHolder"></div>
         </div>
         <Script id= "qrcode" src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"

@@ -24,10 +24,7 @@ export default function Home() {
           try {
             let va = (document.getElementById("name") as HTMLInputElement).value;
             sessionStorage.setItem("qrcode_data",va);
-            console.log("111");
-
             document.getElementById("dataHolder").innerHTML ='<p>'+va+'</p>';
-            console.log("222");
             var typeNumber:TypeNumber = 4;
             var errorCorrectionLevel:ErrorCorrectionLevel = 'L';
             var qr = qrcode(typeNumber, errorCorrectionLevel);

@@ -1,6 +1,6 @@
 {
     "records": [
-      {"name":"Introduction","link":"/"},
+      {"name":"Contact Me","link":"/"},
       {"name":"Barcode Generator","link":"/barcode"},
       {"name":"Qrcode  Generator","link":"/qrcode"},
       {"name":"magiccube","link":"/magiccube"},
